@@ -21,7 +21,7 @@ if (navigator.serviceWorker) {
 var counter = 0
 
 function myButtonClicked() {
-var cookieCount = 1 + counter++
-  document.getElementById("cookie-count").innerHTML = "Your cookie count is " + cookieCount + "."
-
+  var cookieCount = 1 + counter++
+  document.getElementById("cookie-count").innerHTML =
+    "Your cookie count is " + cookieCount + "."
 }
