@@ -1,23 +1,27 @@
-// Copyright (c) 202X Claire Bedrossian All rights reserved
+// Copyright (c) 2022 Claire Bedrossian All rights reserved
 //
 // Created by: Claire Bedrossian
-// Created on: XXX 202X
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
 
 "use strict"
 
 /**
- * Check servie worker.
+ * Check service worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-Unit6-02-JS/sw.js", {
+    scope: "/ICS2O-Unit6-02-JS/",
   })
 }
 
 /**
- * This function displays an alert.
+ * This function adds to a cookie counter with every click
  */
+var counter = 0
+
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+var cookieCount = 1 + counter++
+  document.getElementById("cookie-count").innerHTML = "Your cookie count is " + cookieCount + "."
+
 }
