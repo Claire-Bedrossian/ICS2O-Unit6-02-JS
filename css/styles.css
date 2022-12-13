@@ -34,7 +34,7 @@ p {
 }
 
 img {
-display: block;  
-margin-right: auto;
-margin-right: left;
+  display: block;
+  margin-right: auto;
+  margin-right: left;
 }
