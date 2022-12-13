@@ -15,13 +15,21 @@ if (navigator.serviceWorker) {
   })
 }
 
+function onLoadCookieCount() {
+  if (localStorage.previousCookieCount) {
+    document.getElementById("cookie-count").innerHTML = "Your cookie count is " + localStorage.previousCookieCount + "."
+  } else {
+    localStorage.previousCookieCount = 0
+  }
+}
+
 /**
  * This function adds to a cookie counter with every click
  */
 var counter = 0
 
 function myButtonClicked() {
-  var cookieCount = 1 + counter++
-  document.getElementById("cookie-count").innerHTML =
-    "Your cookie count is " + cookieCount + "."
+  localStorage.previousCookieCount++
+  document.getElementById("cookie-count").innerHTML = "Your cookie count is " + localStorage.previousCookieCount + "."
 }
+
