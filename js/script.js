@@ -17,7 +17,8 @@ if (navigator.serviceWorker) {
 
 function onLoadCookieCount() {
   if (localStorage.previousCookieCount) {
-    document.getElementById("cookie-count").innerHTML = "Your cookie count is " + localStorage.previousCookieCount + "."
+    document.getElementById("cookie-count").innerHTML =
+      "Your cookie count is " + localStorage.previousCookieCount + "."
   } else {
     localStorage.previousCookieCount = 0
   }
@@ -30,6 +31,6 @@ var counter = 0
 
 function myButtonClicked() {
   localStorage.previousCookieCount++
-  document.getElementById("cookie-count").innerHTML = "Your cookie count is " + localStorage.previousCookieCount + "."
+  document.getElementById("cookie-count").innerHTML =
+    "Your cookie count is " + localStorage.previousCookieCount + "."
 }
-
